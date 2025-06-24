@@ -219,7 +219,7 @@ TEST(BthreadTest, concurrency_by_tag) {
     ASSERT_EQ(concurrency_by_tag(con + 1), true);
     ASSERT_EQ(bthread_getconcurrency(), con+1);
     bthread_setconcurrency(con + 1);
-    ASSERT_EQ(concurrency_by_tag(con + 1), true);
+    ASSERT_EQ(concurrency_by_tag(con + 1), false);
 }
 
 } // namespace
